@@ -23,7 +23,7 @@ class _NaviHomeState extends State<NaviHome> {
                 tabAlignment: TabAlignment.start, //왼쪽 정렬
                 unselectedLabelColor: Colors.grey,
                 indicatorSize: TabBarIndicatorSize.label,
-                indicator: null,
+                indicator: BoxDecoration(),
                 labelColor: Colors.black,
 
                 tabs: [
