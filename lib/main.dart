@@ -43,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.black,
       body: Stack(
         children: <Widget>[
-          FittedBox(
+          Positioned.fill(
+            //화면을 곽 채우기
             child: Image.asset(
               'images/Coupang_Play.jpg',
               fit: BoxFit.fill,
