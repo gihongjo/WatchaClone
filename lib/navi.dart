@@ -30,7 +30,7 @@ class _Home extends State<Home> {
       //에니메이션 스위처
       body: AnimatedSwitcher(
         duration: const Duration(milliseconds: 100), // 전환 에니메이션의 지속 시간
-        child: _screens[selectedNum],
+        child: _screens[selectedNum], //전환되는 메인 화면
       ),
       //바텀네비게이션바
       bottomNavigationBar: BottomNavigationBar(

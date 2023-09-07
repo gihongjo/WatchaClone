@@ -10,44 +10,48 @@ class ContentsCard extends StatelessWidget {
   final List<String> imagePaths;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                title,
-                style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-              const Text(
-                "＞",
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 116, 116, 116),
+    return SizedBox(
+      height: 260,
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                      fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  "＞",
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 116, 116, 116),
+                  ),
+                ),
+              ],
+            ),
+            Expanded(
+                //텍스트 아래
+                child: SingleChildScrollView(
+              //오른쪽으로 넘기기
+              scrollDirection: Axis.horizontal,
+              child: Expanded(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    for (var imagePath in imagePaths)
+                      Cards(title: imagePath) //카드들을 imagePaths갯수만큼 만들어~!
+                  ],
                 ),
               ),
-            ],
-          ),
-          Expanded(
-              //텍스트 아래
-              child: SingleChildScrollView(
-            //오른쪽으로 넘기기
-            scrollDirection: Axis.horizontal,
-            child: Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  for (var imagePath in imagePaths)
-                    Cards(title: imagePath) //카드들을 imagePaths갯수만큼 만들어~!
-                ],
-              ),
-            ),
-          ))
-        ],
+            ))
+          ],
+        ),
       ),
     );
   }
