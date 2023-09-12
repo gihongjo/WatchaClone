@@ -38,7 +38,7 @@ class WatchaCollection extends StatelessWidget {
                   Icons.chevron_right,
                   color: Colors.grey,
                   size: 30,
-                )
+                ),
               ],
             ),
             Container(

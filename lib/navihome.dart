@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watcha/home_files/home_movie.dart';
+import 'package:watcha/home_files/home_tv.dart';
 
 class NaviHome extends StatefulWidget {
   const NaviHome({super.key});
@@ -68,7 +69,7 @@ class _NaviHomeState extends State<NaviHome> {
           physics: NeverScrollableScrollPhysics(), //옆으로 스와이프 기능 끄기
           children: [
             Center(child: HomeMovie()),
-            Center(child: Text('TV')),
+            Center(child: HomeTV()),
             Center(child: Text('책')),
             Center(child: Text('웹툰')),
           ],
